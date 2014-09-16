@@ -1,6 +1,7 @@
 '''
 name: Joshua Rodriguez
 email: ewized@gmail.com
+file: squares.py
 problem: chapter 2 number 22 page 149
 description: Create a program that prompts for a positive number greater than 2 
     (check if the input is greater than 2) and then keeps taking the square root of that

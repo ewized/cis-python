@@ -1,6 +1,7 @@
 '''
 name: Joshua Rodriguez
 email: ewized@gmail.com
+file: perfect_square.py
 problem: chapter 2 number 10 page 145
 description: Write a short program that will
     * prompt the user for a number

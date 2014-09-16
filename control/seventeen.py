@@ -1,6 +1,7 @@
 '''
 name: Joshua Rodriguez
 email: ewized@gmail.com
+file: seventeen.py
 problem: chapter 2 number 1 page 144
 description: How many three-digit numbers are divisible by 7? Write a program to print it out
 '''

@@ -4,7 +4,7 @@
 file: monty_python.py
 name: Joshua Rodriguez
 email: ewized@gmail.com
-problem: chapter 4 execise 1 page 219
+problem: chapter 4 exercise 1 page 219
 description: Given the string 'Monty Python':
     a) Print the first char
     b) Print the last char

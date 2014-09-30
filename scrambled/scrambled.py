@@ -36,7 +36,7 @@ other server can provide, this is our game to website integration. We
 reinvented the way you will play the game, as of this we use custom code that
 differ from how you play on other servers. With this Each server that we run
 is connected together, and you can connect to each server without 
-reconnecting. We build our server's using high performance parts and custom
+reconnecting. We build our servers using high performance parts and custom
 code to bring excellent experience to you.\
 """.strip()
 
@@ -45,15 +45,44 @@ code to bring excellent experience to you.\
     in_text = open("in.txt", "r")
     out_text = open("out.txt", "w")
 
+# Function to shuffle the chars around
+def shuffle(word):
+    if len(word) == 1:
+        return word
+    else:
+        half = int(len(word) / 2)
+        # First half in reverse
+        first = word[:half][::-1]
+        # Last half in reverse
+        last = word[half:len(word)][::-1]
+
+        # First + Last in reverse
+        return str(first+last)[::-1]
+
 # Function to scramble the word
 def scramble(word):
-    return word
+    if len(word) < 3:
+        return word
+
+    first = word[:1]
+    last = word[-1:]
+    mid = word[1:-1]
+    
+    if last == "." or last == ",":
+        last = word[-2:]
+        mid = word[1:-2]
+
+    return str(first) + str(shuffle(mid)) + str(last)
 
 # Read the input and write the scrambled words to the output
 for line in in_text:
     line = line.strip()
+    new_line = ""
 
-    print(line, file = out_text)
+    for word in line.split(" "):
+        new_line += scramble(word) + " "
+
+    print(new_line, file = out_text)
 
 # Close open files
 in_text.close()

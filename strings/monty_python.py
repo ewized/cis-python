@@ -18,3 +18,4 @@ print(monty[:1])
 print(monty[-1:])
 print(monty[len(monty) - 1:])
 print(monty[0:5])
+

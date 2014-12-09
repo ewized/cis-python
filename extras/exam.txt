@@ -1,0 +1,84 @@
+1. Which of the following are valid Python identifiers:
+
+> a. A1
+> b. a1
+> c. 1a1
+> d. lol
+e. 101
+> f. _7
+> g. NUMBER
+h. N.1
+
+
+2. Convert each of the following (non-Python) expressions into Python expressions
+
+a.  7x
+b. 7x+y
+c.  x is divisible by 3  (hint this is a boolean expression)
+d.  0 ≤ x ≤ 10
+
+a) 7 * x
+b) 7 * x + y
+c) x % 3 == 0
+d) x >= 0 and x <= 10
+
+3.   Assuming num=30, determine the value of each of the following Python 3 expressions:
+a.  num / 12
+b.  150 % num
+c.  8 + num * 2
+d.  (num == 30) and ( num > 50 )
+
+a) 12
+b) 0
+c) 68
+d) False
+
+4.  What is the output of the following set of statements:
+
+x = 5
+if 2 > x:
+    print("First Statement")
+else:
+    print("Second Statement")
+    if 2 > x:
+         print("Third Statement")
+    print("Fourth Statement")
+print("Fifth Statement")
+
+>>> Second Statement
+>>> Fourth Statement
+>>> Fifth Statement
+
+5.   
+Write a program that will prompt a user to enter a temperature as an integer. Your program will print "it is hot" is the temperature is over 100, "it is cold" if the temperature is under 60, and "it is just right" if the temperature is between 61 and 99 inclusive. The program continues to ask for temperatures, and evaluates them as above, until the user enters a temperature of 0.
+
+This is what the output should look like:
+Please enter a temperature: 95
+It is just right.
+Please enter a temperature: 110
+It is hot.
+Please enter a temperature: 32
+It is cold.
+Please enter a temperature: 0
+Good bye!
+
+
+
+def enter():
+    return int(input("Enter a temperature: "))
+
+temp = enter()
+
+while temp != 0:
+    if temp > 100:
+        print("It is hot.")
+    elif temp < 60:
+        print("Its is cold.")
+        print("It is just right.")
+    elif temp > 60 and temp < 100:
+        print("It is just right.")
+
+    temp = enter()
+
+print("Good bye!")
+ 
